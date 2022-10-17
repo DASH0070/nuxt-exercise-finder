@@ -3,8 +3,8 @@
 
 		<!-- VIDEO LIST  -->
 
-		<div class="flex flex-col min-w-[18rem] w-1/4 shadow-md hover:shadow-2xl duration-500 relative gap-2" v-if="data"
-			v-for="(item, index) in data.slice(0, 6)">
+		<div class="flex flex-col min-w-[18rem] w-1/4 shadow-md hover:shadow-2xl duration-500 relative gap-2"
+			v-if="data" v-for="(item, index) in data.slice(0, 6)">
 			<a class="absolute top-0 left-0 w-full h-full"
 				:href="`https://www.youtube.com/watch?v=${item.video.videoId}`" target="_blank"></a>
 			<img class="h-60" :src="item.video.thumbnails[0].url" />
@@ -31,6 +31,7 @@
 
 <script setup lang="ts">
 import { fetchData } from '../utils/fetchData';
+import axios from 'axios'
 
 const route = useRoute();
 const config = useRuntimeConfig();
@@ -48,8 +49,13 @@ const options = {
 const data = ref();
 
 onMounted(async () => {
-	data.value = await fetchData(options);
-	data.value = data.value.contents;
+	try {
+		data.value = await fetchData(options);
+		data.value = data.value.contents;
+	}
+	catch (err) {
+		showError('API Error Occured try again later');
+	}
 })
 
 </script>

@@ -44,8 +44,13 @@ const options = {
 
 const exerciseList = ref();
 const findExercise = async () => {
-    exerciseList.value = await fetchData(options);
-    exerciseList.value = exerciseList.value.workout;
+    try {
+        exerciseList.value = await fetchData(options);
+        exerciseList.value = exerciseList.value.workout;
+    }
+    catch (err) {
+        showError('API Error Occured try again later');
+    }
 };
 
 </script>
