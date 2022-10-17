@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-wrap my-auto gap-10 justify-center">
+	<div class="flex flex-wrap gap-10 justify-center">
 
 		<!-- VIDEO LIST  -->
 
@@ -33,15 +33,15 @@
 import { fetchData } from '../utils/fetchData';
 
 const route = useRoute();
-
+const config = useRuntimeConfig();
 const options = {
 	method: 'GET',
 	url: 'https://youtube-search-and-download.p.rapidapi.com/search',
 	params: {
-		query: `How to do ${route.params.id} exercise`,
+		query: `${route.params.id} exercise`,
 	},
 	headers: {
-		'X-RapidAPI-Key': '9455eef88fmshc32614f86b23cacp17c080jsn468c5d6f8a23',
+		'X-RapidAPI-Key': config.RAPID_API_KEY,
 		'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
 	}
 };
