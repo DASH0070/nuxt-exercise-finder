@@ -1,42 +1,16 @@
-# Nuxt 3 Minimal Starter
+### Find exercise based on your requirement.  
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+## Select the filters.  
+By clicking on buttons you can change filters for exercise.  
+Click on Find Exercise button to generate list of exercises.  
 
-## Setup
+## Select the exercise  
+Exercise list is long that's why 10 exercise are rendered at a time which can be changed.  
+Can change list by clicking on + and - button above list of exercise.  
+List number is visible between change list buttons.  
+Each exercise in list is a button.  
+By clicking on button you will be redirected to another page.   
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+## Exercise page  
+This page shows the youtube reccomendation of those exercises.  
+By clicking on any div you will be redirected to youtube.com in another tab.  
