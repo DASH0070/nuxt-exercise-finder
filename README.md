@@ -13,3 +13,4 @@ By clicking on the button you will be redirected to another page.
 
 ## Exercise page  
 This page shows the youtube recommendation for those exercises.  
+By clicking on those videos you will be redirected to youtube.com on that video in another tab.  
