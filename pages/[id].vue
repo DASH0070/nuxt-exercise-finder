@@ -7,7 +7,7 @@
 			v-for="(item, index) in data.slice(0, 6)">
 			<a class="absolute top-0 left-0 w-full h-full"
 				:href="`https://www.youtube.com/watch?v=${item.video.videoId}`" target="_blank"></a>
-			<img :src="item.video.thumbnails[0].url" />
+			<img class="h-60" :src="item.video.thumbnails[0].url" />
 			<a class="text-slate-700">{{item.video.title}}</a>
 			<h4 class="text-red-400">{{item.video.channelName}}</h4>
 		</div>
@@ -51,6 +51,5 @@ onMounted(async () => {
 	data.value = await fetchData(options);
 	data.value = data.value.contents;
 })
-
 
 </script>
