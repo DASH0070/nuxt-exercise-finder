@@ -1,4 +1,4 @@
-### Find exercise based on your requirement.  
+# Find exercise based on your requirement.  
 
 ## Select the filters.  
 By clicking on buttons you can change filters for exercise.  
